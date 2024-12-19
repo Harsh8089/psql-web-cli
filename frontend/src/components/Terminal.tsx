@@ -12,7 +12,7 @@ const Terminal = () => {
     const [commands, setCommands] = useState<CommandState[]>([]);
 
     useEffect(() => {
-        commands.forEach(cmd => console.log(cmd.input, cmd.result))
+        commands.forEach((cmd, index) => console.log(index, cmd.input, cmd.result))
     }, [commands]); 
 
   return (
